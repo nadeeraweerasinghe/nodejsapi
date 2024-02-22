@@ -5,6 +5,7 @@ const app = express();
 const port = 3000;
 var allowedOrigins = ['http://localhost:4200',
                       'https://nadeeraweerasinghe.github.io/ngwebsite2/'];app.use(cors({
+    credentials: true,
   origin: function(origin, callback){    // allow requests with no origin 
     // (like mobile apps or curl requests)
     if(!origin) return callback(null, true);    if(allowedOrigins.indexOf(origin) === -1){
