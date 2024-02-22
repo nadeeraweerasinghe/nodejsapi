@@ -3,7 +3,7 @@ var cors = require('cors');
 
 const app = express();
 const port = 3000;
-var allowedOrigins = ['http://local.poc.io',
+var allowedOrigins = ['https://local.poc.io',
                       'https://nadeeraweerasinghe.github.io/ngwebsite2/'];app.use(cors({
     credentials: true,
   origin: function(origin, callback){    // allow requests with no origin 
