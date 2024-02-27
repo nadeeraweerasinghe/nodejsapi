@@ -1,6 +1,7 @@
 const express = require("express");
 var cors = require('cors');
 
+
 const app = express();
 const port = 3000;
 var allowedOrigins = ['https://local.poc.io',
@@ -15,6 +16,8 @@ var allowedOrigins = ['https://local.poc.io',
     }    return callback(null, true);
   }
 }));
+
+app.use('/.well-known', express.static('.well-known'))
 
 let ssoToken = [
     {
