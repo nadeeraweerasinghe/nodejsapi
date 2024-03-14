@@ -32,11 +32,11 @@ let rws = {
   "primary": "https://nodejsapi1.vercel.app",
   "associatedSites": [
      "https://ngwebsite2.tiiny.site",
-     "https://local.poc.io"
+     "https://local.com.au"
   ],
   "rationaleBySite": {
      "https://ngwebsite2.tiiny.site": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://ngwebsite2.tiiny.site",
-     "https://local.poc.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.poc.io"
+     "https://local.com.au": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.com.au"
   }
 }; 
 
