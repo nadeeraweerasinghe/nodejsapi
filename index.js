@@ -27,6 +27,19 @@ let ssoToken = [
     }
 ];
 
+let rws = {
+    "contact": "nadeerax@gmail.com",
+    "primary": "https://nodejsapi1.vercel.app",
+    "associatedSites": [
+       "https://nadeeraweerasinghe.github.io",
+       "https://local.poc.io"
+    ],
+    "rationaleBySite": {
+       "https://nadeeraweerasinghe.github.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://nadeeraweerasinghe.github.io",
+       "https://local.poc.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.poc.io"
+    }
+ } 
+
 app.get('/token', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Set-Cookie', 'PearsonExtSSOSession=YEDJVw7IP9U6NlWM7M0n4mZBJtU.*AAJTSQACMDIAAlNLABwwYnFDTURqNWlic1dhaW1PTkRNeWkxWkJZa3c9AAR0eXBlAANDVFMAAlMxAAIwNw..*; Domain=.vercel.app; Path=/; Secure; HttpOnly; SameSite=none');
@@ -38,5 +51,10 @@ app.post('/authenticate', (req, res) => {
     res.setHeader('Set-Cookie', 'PearsonExtSSOSession=YEDJVw7IP9U6NlWM7M0n4mZBJtU.*AAJTSQACMDIAAlNLABwwYnFDTURqNWlic1dhaW1PTkRNeWkxWkJZa3c9AAR0eXBlAANDVFMAAlMxAAIwNw..*; Domain=.vercel.app; Path=/;  Secure; HttpOnly; SameSite=none');
     res.json(ssoToken);
 })
+
+app.get('/.well-known/related-website-set.json', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.json(rws);
+});
 
 app.listen(port, () => console.log(`Server listening at the port ${port}`));
