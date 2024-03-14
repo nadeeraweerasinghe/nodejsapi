@@ -17,7 +17,7 @@ var allowedOrigins = ['https://local.poc.io',
   }
 }));
 
-app.use('/.well-known', express.static('.well-known'))
+//app.use('/.well-known', express.static('.well-known'))
 
 let ssoToken = [
     {
@@ -28,17 +28,17 @@ let ssoToken = [
 ];
 
 let rws = {
-    "contact": "nadeerax@gmail.com",
-    "primary": "https://nodejsapi1.vercel.app",
-    "associatedSites": [
-       "https://nadeeraweerasinghe.github.io",
-       "https://local.poc.io"
-    ],
-    "rationaleBySite": {
-       "https://nadeeraweerasinghe.github.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://nadeeraweerasinghe.github.io",
-       "https://local.poc.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.poc.io"
-    }
- } 
+  "contact": "nadeerax@gmail.com",
+  "primary": "https://nodejsapi1.vercel.app",
+  "associatedSites": [
+     "https://ngwebsite2.tiiny.site",
+     "https://local.poc.io"
+  ],
+  "rationaleBySite": {
+     "https://ngwebsite2.tiiny.site": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://ngwebsite2.tiiny.site",
+     "https://local.poc.io": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.poc.io"
+  }
+}; 
 
 app.get('/token', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
