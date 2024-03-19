@@ -4,8 +4,7 @@ var cors = require('cors');
 
 const app = express();
 const port = 3000;
-var allowedOrigins = ['https://local.poc.io',
-                      'https://nadeeraweerasinghe.github.io'];app.use(cors({
+var allowedOrigins = ['https://dev.diagnostic.pearsonplaces.com.au'];app.use(cors({
     credentials: true,
   origin: function(origin, callback){    // allow requests with no origin 
     // (like mobile apps or curl requests)
@@ -31,12 +30,10 @@ let rws = {
   "contact": "nadeerax@gmail.com",
   "primary": "https://nodejsapi1.vercel.app",
   "associatedSites": [
-     "https://ngwebsite2.tiiny.site",
-     "https://local.com.au"
+     "https://dev.diagnostic.pearsonplaces.com.au"
   ],
   "rationaleBySite": {
-     "https://ngwebsite2.tiiny.site": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://ngwebsite2.tiiny.site",
-     "https://local.com.au": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://local.com.au"
+     "https://dev.diagnostic.pearsonplaces.com.au": "Testing how to calll https://nodejsapi1.vercel.app to create an authentication cookie from https://dev.diagnostic.pearsonplaces.com.au"
   }
 }; 
 
